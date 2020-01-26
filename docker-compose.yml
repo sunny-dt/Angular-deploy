@@ -1,16 +1,22 @@
 version: '3.6'
 services:
-    angular:
+    angular-ci:
+      hostname: localhost
+      container_name: angular-ci
       build:
         context: .
         dockerfile: Dockerfile
+      image: angular-ci-image
       ports:
         - '5500:80'
-    cypress:
+    cypress-ci:
+        hostname: localhost
+        container_name: cypress-ci
         build:
             context: .
             dockerfile: Dockerfile-cypress
+        image: cypress-ci-image
         depends_on:
-            - angular
+            - angular-ci
         network_mode: 'host'
         

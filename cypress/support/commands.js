@@ -1,6 +1,6 @@
 Cypress.Commands.add("login", (Username, Password) => { 
-    cy.visit("https://digitaas.io/amat/beamplatform/app/login");
-    
+    // cy.visit("https://digitaas.io/amat/beamplatform/app/login");
+    cy.visit("http://localhost:4200/");
 
     cy.get("#mat-input-1")
       .type("amat2@digitaltaas.com")
@@ -11,7 +11,6 @@ Cypress.Commands.add("login", (Username, Password) => {
     cy.contains("LOGIN").click();
     cy.url()
       .should("include", "/launch");
-    
 })
 //
 //

@@ -1,9 +1,6 @@
 describe("MAPPER TEST", function() {
-	it("VERIFIES LOGIN FUNTIONALITY AND URL", function() {
-		
+	it("VERIFIES LOGIN FUNTIONALITY AND URL", function() {		
 		cy.login()
-		
-		
 		
 	})
 	
