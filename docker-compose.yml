@@ -6,7 +6,7 @@ services:
       build:
         context: .
         dockerfile: Dockerfile
-      image: angular-ci-image
+      image: localhost:50000/angular-ci-image
       ports:
         - '5500:80'
     cypress-ci:
@@ -15,7 +15,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile-cypress
-        image: cypress-ci-image
+        image: localhost:50000/cypress-ci-image
         depends_on:
             - angular-ci
         network_mode: 'host'
