@@ -5,12 +5,8 @@ pipeline {
     stages {
         stage ('one'){
             steps {
-                echo 'Testing jenkinsfile'
-            }
-        }
-        stage ('two'){
-            steps{
-                input(' Do you want to proceed')
+                sh 'node --version'
+                sh 'svn --version'  
             }
         }
     }
