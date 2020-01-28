@@ -18,5 +18,13 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        post {
+            always {
+                junit '**/target/*.xml'
+            }
+            failure {
+                mail to: sunny@digitaltaas.com, subject: 'The Pipeline failed :('
+            }
+        }
     }
 }
