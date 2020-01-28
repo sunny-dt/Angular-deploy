@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        dockerfile true
+    }
     stages {
         stage ('one'){
             steps {
@@ -12,13 +14,8 @@ pipeline {
             }
         }
         stage('three'){
-            when {
-                not {
-                    branch 'master'
-                }
-            }
-            steps{
-                echo 'Hello from branch'
+            parallel {
+
             }
         }
     }
