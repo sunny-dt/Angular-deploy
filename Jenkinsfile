@@ -3,6 +3,6 @@ node {
         git 'https://github.com/sunny-dt/Angular-deploy.git'
     }
     stage('Node package install'){
-        powershell label: '', script: 'npm i'
+        sh label: 'dependecies', script: 'npm i'
     }
 }
