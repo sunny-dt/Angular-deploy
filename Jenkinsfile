@@ -1,9 +1,9 @@
 pipeline {
-    agent any
-
-    tools {null "node"}
+    agent {
+    docker {
+            image 'node:6-alpine' 
+        }}
     }
-
     stages {
         stage('Dependencies') {
             steps {
