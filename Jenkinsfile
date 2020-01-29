@@ -3,10 +3,7 @@ pipeline {
         docker { image 'node:10-alpine' }
     }
     stages {
-        stage('SCM Checkout'){
-            git 'https://github.com/sunny-dt/Angular-deploy.git'
-        }
-        stage('Restore') {
+        stage('Npm install') {
             steps {
                 sh 'npm install'
             }
