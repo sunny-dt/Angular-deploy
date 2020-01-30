@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    tool name: '', type: 'nodejs'
+    stages {
+        stage('Build') {
+            steps {
+                git 'https://github.com/sunny-dt/Angular-deploy.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+                sh 'ls -la'
+            }
+        }
+        stage('npm install') {
+           steps {
+                echo 'Testing..'
+                
+            }
+        }
+ 
+    }
+}
